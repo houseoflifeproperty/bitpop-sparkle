@@ -17,7 +17,7 @@
                 '<!@(ls -1 Sparkle/*.m)',
               ],
               'outputs': [
-                'Build/Products/Release/Sparkle.framework'
+                'Build/Release/Sparkle.framework'
               ],
               'action': [
                 # this is the command that `make release` runs,
@@ -29,7 +29,7 @@
             {
               'action_name': 'Copy Sparkle Framework unversioned',
               'inputs': [
-                'Build/Products/Release/Sparkle.framework'
+                'Build/Release/Sparkle.framework'
               ],
               'outputs': [
                 '<(PRODUCT_DIR)/Sparkle.framework'
@@ -38,7 +38,7 @@
                 #'echo `pwd` && set &&',
                 #'/usr/bin/env', 'bash', '-c',
                 '${BUILT_PRODUCTS_DIR}/../../build/mac/copy_framework_unversioned.sh',
-                '${SOURCE_ROOT}/Build/Products/Release/Sparkle.framework',
+                '${SOURCE_ROOT}/Build/Release/Sparkle.framework',
                 '${BUILT_PRODUCTS_DIR}',
               ]
             }
@@ -47,7 +47,7 @@
             {
               'destination': '<(PRODUCT_DIR)/Sparkle_versioned',
               'files': [
-                'Build/Products/Release/Sparkle.framework'
+                'Build/Release/Sparkle.framework'
               ]
             }
           ],
